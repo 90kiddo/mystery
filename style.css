@@ -1,0 +1,831 @@
+:root {
+
+    /* color variables  */
+    --white: #FFFFFF;
+    --black: #000000;
+    --grey: #EDEDED;
+    --greylight: #dcdbdb;
+    --light: #adacac;
+    --extralight: #ededed;
+    --purple: #1C1421;
+    --orange: #FF6C07;
+    --text-light: #676767;
+
+    /* typo varibale*/
+    --poppins: "Poppins", sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: var(--poppins);
+    background: #000000;
+}
+
+/* navbar starts from here */
+
+.navbar-nav a{
+    font-size: 14px;
+    color: var(--white);
+}
+
+.navbar-nav .nav-link.active{
+    color: var(--white);
+}
+
+.navbar{
+    padding: 10px 20px;
+    background-color: var(--black);
+}
+
+.custom-toggler {
+  border: 2px solid #f97316; 
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+.navbar-nav .nav-link-underline {
+  position: relative;
+  color: #ccc;
+  transition: color 0.3s;
+  display: inline-block;
+}
+
+.navbar-nav .nav-link-underline:hover,
+.navbar-nav .nav-link-underline:focus {
+  color: #fff;
+}
+
+.navbar-nav .nav-link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f97316;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link-underline:hover::after,
+.navbar-nav .nav-link-underline:focus::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link-underline.active {
+  color: #fff;
+}
+
+.navbar-nav .nav-link-underline.active::after {
+  width: 100%;
+}
+
+
+.navbar-nav .dropdown-toggle:hover {
+  color: #fff;
+}
+
+
+.dropdown-menu {
+  background-color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 10px;
+}
+
+.dropdown-item {
+  color: #fff;
+}
+
+.dropdown-item:hover {
+  background-color: #f97316;
+  color: #ffffff;
+}
+
+.dropdown-item.active {
+  background-color: #f97316;
+  color: #ffffff;
+}
+
+.navbar-nav{
+    margin-left: 50px;
+}
+
+
+.custom-lang-toggle {
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 6px 16px;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+
+.custom-lang-toggle::after {
+  display: none;
+}
+
+
+.dropdown-arrow {
+  color: #f97316;
+  font-size: 12px;
+}
+
+
+.dropdown-menu {
+  background-color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 160px;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  background-color: #f97316;
+  color: black;
+}
+
+.dropdown-item.active {
+  background-color: #f97316;
+  color: black;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 1050;
+}
+@media screen and (max-width: 768px) {
+  .navbar-nav{
+    margin-left: 0px;
+}
+}
+
+/* navbar ends here */
+
+/* hero starts from here */
+
+.hero {
+    background-image: url("./assets/hero/hero_bg.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+}
+
+.btn-hero{
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.hero-text{
+    padding: 100px 20px;
+}
+
+.d-md-block{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+   .hero h1 {
+    font-size: 45px;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.hero-text{
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.btn-hero{
+    font-size: 13px;
+}
+
+.hero-mobile .col-md-5 img{
+    margin-top: 60px;
+}
+.hero-mobile .btn-hero{
+    margin-top: 60px;
+}
+    
+}
+
+/* hero ends here */
+
+/* galaxy starts from here */
+
+.galaxy-mystery-section {
+  background: url('./assets/galaxy/galaxy_bg.png') no-repeat right center;
+  background-size: cover;
+  padding: 80px 20px;
+  color: #fff;
+  position: relative;
+  margin-top: 50px;
+}
+
+.galaxy-mystery-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(11,14,19,0.95) 50%, rgba(11,14,19,0.4));
+  z-index: 1;
+}
+
+.galaxy-mystery-section-item {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.text-content h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  color: #f97316;
+}
+
+.text-content p {
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 20px;
+}
+.section-title-row h3 {
+  font-size: 24px;
+  border-left: 3px solid #f97316;
+  padding-left: 10px;
+}
+.see-all {
+  color: #f97316;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.galaxy-slider .slide-card {
+  border-radius: 12px;
+  text-align: center;
+  margin: 10px;
+}
+.galaxy-slider .slide-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.galaxy-slider .slide-card h4 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+.galaxy-slider .slide-card button {
+  background: none;
+  color: #f97316;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+   .text-content{
+    text-align: center;
+   }
+
+   .text-content h2 {
+    font-size: 32px;
+}
+
+.section-title-row h3 {
+    font-size: 22px;
+}
+
+.galaxy-mystery-section {
+  padding: 30px 20px;
+}
+    
+}
+
+
+/* galaxy ends here */
+
+/* paranormal starts from here */
+
+.paranormal-mystery-section {
+  background: url('./assets/paranormal/paranormal_bg.png') no-repeat right center;
+  background-size: cover;
+  padding: 80px 20px;
+  color: #fff;
+  position: relative;
+  margin-top: 50px;
+}
+
+.paranormal-mystery-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(11,14,19,0.95) 50%, rgba(11,14,19,0.4));
+  z-index: 1;
+}
+
+.paranormal-slider .slide-card {
+  border-radius: 12px;
+  text-align: center;
+  margin: 10px;
+}
+.paranormal-slider .slide-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.paranormal-slider .slide-card h4 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+.paranormal-slider .slide-card button {
+  background: none;
+  color: #f97316;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+.paranormal-mystery-section {
+  padding: 30px 20px;
+}
+    
+}
+
+/* paranormal ends here */
+/* natural starts from here */
+
+.natural-mystery-section {
+  background: url('./assets/natural/natural_bg.png') no-repeat right center;
+  background-size: cover;
+  padding: 80px 20px;
+  color: #fff;
+  position: relative;
+  margin-top: 50px;
+}
+
+.natural-mystery-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(11,14,19,0.95) 50%, rgba(11,14,19,0.4));
+  z-index: 1;
+}
+
+.natural-slider .slide-card {
+  border-radius: 12px;
+  text-align: center;
+  margin: 10px;
+}
+.natural-slider .slide-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.natural-slider .slide-card h4 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+.natural-slider .slide-card button {
+  background: none;
+  color: #f97316;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+.natural-mystery-section {
+  padding: 30px 20px;
+}
+    
+}
+/* natural ends here */
+
+/* mysterious starts from here */
+
+.mysterious-mystery-section {
+  background: url('./assets/mysterious/mysterious_bg.png') no-repeat right center;
+  background-size: cover;
+  padding: 80px 20px;
+  color: #fff;
+  position: relative;
+  margin-top: 50px;
+}
+
+.mysterious-mystery-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(11,14,19,0.95) 50%, rgba(11,14,19,0.4));
+  z-index: 1;
+}
+
+.mysterious-slider .slide-card {
+  border-radius: 12px;
+  text-align: center;
+  margin: 10px;
+}
+.mysterious-slider .slide-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.mysterious-slider .slide-card h4 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+.mysterious-slider .slide-card button {
+  background: none;
+  color: #f97316;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+.mysterious-mystery-section {
+  padding: 30px 20px;
+}
+    
+}
+
+/* mysterious ends here */
+
+/* stories starts from here */
+
+.stories {
+  background: url('./assets/stories/stories_bg.png') no-repeat center center;
+  background-size: cover;
+  padding: 100px 20px;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+
+.stories-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.stories-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.stories-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 20px 30px;
+  min-width: 180px;
+}
+
+.stories-box h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f97316; 
+  margin: 0;
+}
+
+.stories-box p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+
+.stories {
+  padding: 40px 20px;
+}
+    
+.stories-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+}
+
+/* stories ends here */
+
+
+/* users starts from here */
+
+.users {
+  background: linear-gradient(135deg, #0b0e13, #111d30);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.users-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.users-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.users-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
+  position: relative;
+}
+
+.users-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.users-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #c9c9c8;
+}
+
+.users-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.users-location {
+  margin: 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.users-quote {
+  font-size: 36px;
+  color: #f97316;
+  margin: 10px 0;
+}
+
+.users-text {
+  font-size: 15px;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.users-footer-text {
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+.users-btn {
+  background-color: #f97316;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.users-btn:hover {
+  background-color: #e2620d;
+}
+
+
+/* users ends here */
+
+
+/* paranormal page starts from here */
+
+.paranormal-hero{
+    background-image: url("./assets/paranormal/paranormal_page_bg.png");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+}
+
+.paranormal-hero-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;      
+  text-align: center;
+}
+
+.paranormal-hero-text h1{
+    color: var(--white);
+    margin-top: 60px;
+}
+/* paranormal page ends here */
+
+
+/* cards starts from here */
+
+
+.mystery-cards {
+  padding: 60px 20px;
+  background-color: #000; 
+  color: #fff;
+}
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+
+.mystery-card {
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mystery-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.mystery-title {
+  margin: 15px 0;
+  font-size: 16px;
+  color: #fff;
+  flex-grow: 1;
+}
+
+
+
+
+.terms{
+    margin-left: 30px;
+}
+
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+.mystery-cards{
+    padding: 60px 0px;
+}
+
+.mystery-card{
+    padding: 8px;
+}
+}
+/* cards ends here */
+
+
+/* natural page starts from here */
+
+.natural-hero{
+    background-image: url("./assets/natural/natural_page_bg.png");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+}
+
+.natural-hero-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;      
+  text-align: center;
+}
+
+.natural-hero-text h1{
+    color: var(--white);
+    margin-top: 60px;
+}
+/* natural page ends here */
+/* galaxy page starts from here */
+
+.galaxy-hero{
+    background-image: url("./assets/galaxy/galaxy_page_bg.png");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+}
+
+.galaxy-hero-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;      
+  text-align: center;
+}
+
+.galaxy-hero-text h1{
+    color: var(--white);
+    margin-top: 60px;
+}
+/* galaxy page ends here */
+
+/* galaxy page starts from here */
+
+.mysterious-hero{
+    background-image: url("./assets/mysterious/mysterious_page_bg.png");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+}
+
+.mysterious-hero-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;      
+  text-align: center;
+}
+
+.mysterious-hero-text h1{
+    color: var(--white);
+    margin-top: 60px;
+}
+/* mysterious page ends here */
