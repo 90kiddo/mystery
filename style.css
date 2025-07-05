@@ -47,7 +47,7 @@ body {
 }
 
 .custom-toggler {
-  border: 2px solid #f97316; 
+  /* border: 2px solid #f97316;  */
   padding: 6px 10px;
   border-radius: 4px;
 }
@@ -186,7 +186,7 @@ body {
 /* hero starts from here */
 
 .hero {
-    background-image: url("./assets/hero/hero_bg.png");
+    background-image: url("./assets/hero/hero.gif");
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -236,7 +236,7 @@ body {
 }
 
 .hero-text{
-    padding: 30px 20px;
+    padding: 0px 20px;
     text-align: center;
     color: white;
     margin-top: 20px;
@@ -310,6 +310,7 @@ body {
   color: #f97316;
   text-decoration: none;
   font-weight: bold;
+  margin-top: -10px;
 }
 
 .galaxy-slider .slide-card {
@@ -333,23 +334,72 @@ body {
   cursor: pointer;
 }
 
+.galaxy-arrows {
+    display: flex;
+    gap: 6px;
+    position: relative;
+    left: 94%;
+}
+
+.galaxy-arrows button {
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #f97316;
+}
+
+.galaxy-arrows button:hover {
+    background: #eee;
+}
+
+
 @media screen and (max-width: 768px) {
    .text-content{
     text-align: center;
    }
 
-   .text-content h2 {
-    font-size: 32px;
+    .text-content h2 {
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .text-content p{
+    color: #ccc;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: left;
 }
 
 .section-title-row h3 {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .galaxy-mystery-section {
-  padding: 30px 20px;
+  padding: 30px 0px;
+}
+
+.see-all {
+  color: #f97316;
+  text-decoration: none;
+  font-weight: 400;
 }
     
+.galaxy-slider .slick-track{
+  position: relative;
+  left: 20%;
+}
+
+.galaxy-arrows {
+    display: flex;
+    gap: 6px;
+    position: relative;
+    left: 86%;
+}
 }
 
 
@@ -398,7 +448,12 @@ body {
 @media screen and (max-width: 768px) {
 
 .paranormal-mystery-section {
-  padding: 30px 20px;
+  padding: 30px 0px;
+}
+
+.paranormal-slider .slick-track{
+  position: relative;
+  left: 20%;
 }
     
 }
@@ -447,7 +502,12 @@ body {
 @media screen and (max-width: 768px) {
 
 .natural-mystery-section {
-  padding: 30px 20px;
+  padding: 30px 0px;
+}
+
+.natural-slider .slick-track{
+  position: relative;
+  left: 20%;
 }
     
 }
@@ -496,7 +556,12 @@ body {
 @media screen and (max-width: 768px) {
 
 .mysterious-mystery-section {
-  padding: 30px 20px;
+  padding: 30px 0px;
+}
+
+.mysterious-slider .slick-track{
+  position: relative;
+  left: 20%;
 }
     
 }
@@ -561,6 +626,33 @@ body {
     flex-wrap: wrap;
     gap: 40px;
 }
+
+.stories-content h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.stories-box h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f97316; 
+  margin: 0;
+}
+
+.stories-box p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: #fff;
+}
+
+.stories-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    padding: 12px 30px;
+    min-width: 157px;
+}
 }
 
 /* stories ends here */
@@ -597,7 +689,21 @@ body {
   max-width: 300px;
   text-align: left;
   position: relative;
+   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
 }
+
+.user-slider .slick-track {
+  display: flex;
+}
+
+.user-slider .slick-slide {
+  height: auto !important;
+  display: flex;
+} 
 
 .users-info {
   display: flex;
@@ -661,7 +767,33 @@ body {
   background-color: #e2620d;
 }
 
+.users-card {
+    margin-right: 20px;
+}
 
+.users-card .slick-slide {
+    margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+
+.users-title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.users-footer-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.user-slider .slick-track{
+  position: relative;
+  left: 35%;
+}
+}
 /* users ends here */
 
 
@@ -754,15 +886,6 @@ body {
 
 .mystery-card{
     padding: 8px;
-}
-
-
-.policy{
-    margin-left: 22px;
-}
-
-.company{
-    margin-left: 36px;
 }
 }
 /* cards ends here */

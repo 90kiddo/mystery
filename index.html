@@ -84,7 +84,7 @@
         <div class="container-fluid hero-mobile d-md-none">
             <div class="row">
                 <div class="col-md-5">
-                    <img src="./assets/hero/hero-mobile.png" class="img-fluid" alt="">
+                    <img src="./assets/hero/hero.gif" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-7">
                     <div class="hero-text">
@@ -94,7 +94,7 @@
                         <a href="#" class="btn-hero">Watch Now <img src="./assets/hero/play.png" alt=""></a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -117,7 +117,10 @@
                 <a href="./galaxy.html" class="see-all">See All</a>
             </div>
 
-
+            <div class="galaxy-arrows">
+            <button class="galaxy-prev">‹</button>
+            <button class="galaxy-next">›</button>
+        </div>
             <div class="galaxy-slider">
                 <div class="slide-card">
                     <img src="./assets/galaxy/slide1.png" alt="">
@@ -189,7 +192,10 @@
                 <a href="./paranormal.html" class="see-all">See All</a>
             </div>
 
-
+<div class="galaxy-arrows">
+            <button class="paranormal-prev">‹</button>
+            <button class="paranormal-next">›</button>
+        </div>
             <div class="paranormal-slider">
                 <div class="slide-card">
                     <img src="./assets/paranormal/slide1.png" alt="">
@@ -224,7 +230,7 @@
         <div class="users-container">
             <h2 class="users-title">Mysteries From Our Users</h2>
 
-            <div class="users-cards">
+            <div class="user-slider">
                 <div class="users-card">
                     <div class="users-info">
                         <img src="./assets/users/user1.png" alt="John Fernandes" class="users-avatar">
@@ -271,7 +277,7 @@
                 </div>
             </div>
 
-            <p class="users-footer-text">
+            <p class="users-footer-text mt-5">
                 Have a strange experience or a mystery of your own? Share it with us—your story might be featured next!
             </p>
             <button class="users-btn">Submit Your Mystery</button>
@@ -294,7 +300,10 @@
                 <a href="./natural.html" class="see-all">See All</a>
             </div>
 
-
+<div class="galaxy-arrows">
+            <button class="natural-prev">‹</button>
+            <button class="natural-next">›</button>
+        </div>
             <div class="natural-slider">
                 <div class="slide-card">
                     <img src="./assets/natural/slide1.png" alt="">
@@ -338,7 +347,10 @@
                 <a href="./mysterious.html" class="see-all">See All</a>
             </div>
 
-
+<div class="galaxy-arrows">
+            <button class="mysterious-prev">‹</button>
+            <button class="mysterious-next">›</button>
+        </div>
             <div class="mysterious-slider">
                 <div class="slide-card">
                     <img src="./assets/mysterious/slide1.png" alt="">
@@ -371,10 +383,10 @@
 
     <div class="container-fluid mt-5 mb-5">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center policy"> <a href="/"
+            <div class="col-md-4 d-flex align-items-center mx-4"> <a href="/"
                     class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> </a>
                 <span class="mb-3 mb-md-0 text-white">Privacy Policy</span>
-                <span class="mb-3 mb-md-0 text-white terms">Terms & Conditions</span>
+                <span class="mb-3 mb-md-0 text-white mx-2">Terms & Conditions</span>
             </div>
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                 <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Instagram"><svg class="bi"
@@ -382,7 +394,7 @@
                             <use xlink:href="#instagram"></use>
                         </svg></a></li>
                 <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Facebook"><span
-                            class="mb-3 mb-md-0 text-white company">© 2025 Company, Inc</span></a></li>
+                            class="mb-3 mb-md-0 text-white mx-4">© 2025 Company, Inc</span></a></li>
             </ul>
         </footer>
     </div>
@@ -400,43 +412,59 @@
             $('.galaxy-slider').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1,
-                arrows: false,
+                arrows: true,
+                prevArrow: $('.galaxy-prev'),
+                nextArrow: $('.galaxy-next'),
                 dots: false,
                 infinite: true,
-                autoplay: true,
-                autoplaySpeed: 0,
-                speed: 10000,
-                cssEase: 'linear',
+                autoplay: false,
+                autoplaySpeed: 2000,
+                speed: 500,
                 pauseOnHover: false,
                 responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: { slidesToShow: 3 }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: { slidesToShow: 2.5 }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: { slidesToShow: 2.5 }
-                    }
+                    { breakpoint: 1024, settings: { slidesToShow: 3 } },
+                    { breakpoint: 768, settings: { slidesToShow: 2.5 } },
+                    { breakpoint: 480, settings: { slidesToShow: 2.5 } }
                 ]
             });
         });
     </script>
+
     <script>
         $(document).ready(function () {
             $('.paranormal-slider').slick({
+                 slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true,
+                prevArrow: $('.paranormal-prev'),
+                nextArrow: $('.paranormal-next'),
+                dots: false,
+                infinite: true,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                speed: 500,
+                pauseOnHover: false,
+                responsive: [
+                    { breakpoint: 1024, settings: { slidesToShow: 3 } },
+                    { breakpoint: 768, settings: { slidesToShow: 2.5 } },
+                    { breakpoint: 480, settings: { slidesToShow: 2.5 } }
+                ]
+            });
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.user-slider').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 arrows: false,
                 dots: false,
                 infinite: true,
                 autoplay: true,
-                autoplaySpeed: 0,
-                speed: 10000,
-                cssEase: 'linear',
+                autoplaySpeed: 2000,
+                speed: 500,
                 pauseOnHover: false,
                 responsive: [
                     {
@@ -445,11 +473,11 @@
                     },
                     {
                         breakpoint: 768,
-                        settings: { slidesToShow: 2.5 }
+                        settings: { slidesToShow: 1.5 }
                     },
                     {
                         breakpoint: 480,
-                        settings: { slidesToShow: 2.5 }
+                        settings: { slidesToShow: 1.5 }
                     }
                 ]
             });
@@ -459,29 +487,21 @@
     <script>
         $(document).ready(function () {
             $('.natural-slider').slick({
-                slidesToShow: 4,
+                 slidesToShow: 4,
                 slidesToScroll: 1,
-                arrows: false,
+                arrows: true,
+                prevArrow: $('.natural-prev'),
+                nextArrow: $('.natural-next'),
                 dots: false,
                 infinite: true,
-                autoplay: true,
-                autoplaySpeed: 0,
-                speed: 10000,
-                cssEase: 'linear',
+                autoplay: false,
+                autoplaySpeed: 2000,
+                speed: 500,
                 pauseOnHover: false,
                 responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: { slidesToShow: 3 }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: { slidesToShow: 2.5 }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: { slidesToShow: 2.5 }
-                    }
+                    { breakpoint: 1024, settings: { slidesToShow: 3 } },
+                    { breakpoint: 768, settings: { slidesToShow: 2.5 } },
+                    { breakpoint: 480, settings: { slidesToShow: 2.5 } }
                 ]
             });
         });
@@ -489,29 +509,21 @@
     <script>
         $(document).ready(function () {
             $('.mysterious-slider').slick({
-                slidesToShow: 4,
+              slidesToShow: 4,
                 slidesToScroll: 1,
-                arrows: false,
+                arrows: true,
+                prevArrow: $('.mysterious-prev'),
+                nextArrow: $('.mysterious-next'),
                 dots: false,
                 infinite: true,
-                autoplay: true,
-                autoplaySpeed: 0,
-                speed: 10000,
-                cssEase: 'linear',
+                autoplay: false,
+                autoplaySpeed: 2000,
+                speed: 500,
                 pauseOnHover: false,
                 responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: { slidesToShow: 3 }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: { slidesToShow: 2.5 }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: { slidesToShow: 2.5 }
-                    }
+                    { breakpoint: 1024, settings: { slidesToShow: 3 } },
+                    { breakpoint: 768, settings: { slidesToShow: 2.5 } },
+                    { breakpoint: 480, settings: { slidesToShow: 2.5 } }
                 ]
             });
         });
